@@ -1,0 +1,34 @@
+.button_scroll 
+	min-width: 24px
+	max-width: 24px
+	min-height: 44px
+	max-height: 44px
+	border: 2px solid white
+	border-radius: 50px
+	display: flex
+	justify-content: center
+	margin: 40px 0
+
+	.button_scroll-dot
+		margin-top: 4px
+		min-width: 14px
+		max-width: 14px
+		min-height: 14px
+		max-height: 14px
+		background-color: white
+		border-radius: 50px
+		animation: down 3s infinite 1s ease-in-out
+		
+
+	@keyframes down
+		20%, 100%
+			opacity: 0
+			margin-top: 21px
+		0%
+			opacity: 0
+		10%
+			opacity: 1
+
+
+		
+	
