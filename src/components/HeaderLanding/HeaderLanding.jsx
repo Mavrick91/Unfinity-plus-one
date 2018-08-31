@@ -3,11 +3,11 @@ import { Logo } from "./Logo";
 import { ButtonScroll } from "./ButtonScroll";
 import { ImagesSide } from "./ImagesSide";
 
-import layerVent from "../../images/layer-vent.png";
-import layerHospital from "../../images/layer-hospital.png";
-import layerAwyer from "../../images/layer-awyer.png";
-import layerTranport from "../../images/layer-transport.png";
-import layerConstruction from "../../images/layer-construction.png";
+import layerVent from "../../images/header/layer-vent.png";
+import layerHospital from "../../images/header/layer-hospital.png";
+import layerAwyer from "../../images/header/layer-awyer.png";
+import layerTranport from "../../images/header/layer-transport.png";
+import layerConstruction from "../../images/header/layer-construction.png";
 
 import "./HeaderLanding.css";
 
