@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 
-import logoSlider from "../../../images/logo-slider.png";
+import logoSlider from "../../../images/header/logo-slider.png";
 
 import "./Logo.css";
 
