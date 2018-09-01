@@ -1,6 +1,7 @@
 import React, { PureComponent } from "react";
 import InViewMonitor from "react-inview-monitor";
 import { DisplayConcept } from "./DisplayConcept";
+import { TitleSection } from "../TitleSection";
 
 import "./Concept.css";
 
@@ -9,13 +10,11 @@ export default class Concept extends PureComponent {
     return (
       <div className="col-md-12">
         <div className="row py-md-5">
-          <div className="col-md-5 mx-auto">
-            <h1 className="concept_title">CHOOSE A CONCEPT</h1>
-            <p className="concept_description">
-              Modern, easily importable, and highly customizable demo layouts.
-              Create your website without any effort, quickly and easily!
-            </p>
-          </div>
+          <TitleSection
+            title="CHOOSE A CONCEPT"
+            subtitle="Modern, easily importable, and highly customizable demo layouts.
+          Create your website without any effort, quickly and easily!"
+          />
         </div>
         <div className="row">
           <InViewMonitor
