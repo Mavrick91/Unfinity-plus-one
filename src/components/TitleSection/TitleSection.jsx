@@ -1,6 +1,13 @@
-import React, { PureComponent } from "react";
+// @flow
 
-export default class TitleSection extends PureComponent {
+import React, { PureComponent } from 'react';
+
+type Props = {
+  title: string,
+  subtitle: string
+};
+
+export default class TitleSection extends PureComponent<Props> {
   render() {
     const { title, subtitle } = this.props;
 

@@ -1,1 +1,1 @@
-export { default as HeaderLanding } from "./HeaderLanding";
+export default from './HeaderLanding';

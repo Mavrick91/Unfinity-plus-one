@@ -1,18 +1,20 @@
-import React, { PureComponent } from "react";
+// @flow
 
-export default class ContainerSection extends PureComponent {
-  render() {
-    const { backgroundColor } = this.props;
+import React from 'react';
 
-    return (
-      <div
-        className="col-md-12"
-        style={{
-          background: `${backgroundColor ? backgroundColor : "white"}`
-        }}
-      >
-        {this.props.children}
-      </div>
-    );
-  }
-}
+type Props = {
+  backgroundColor?: string,
+  children: any,
+};
+
+const ContainerSection = ({ backgroundColor, children }: Props) => (
+  <div className="col-md-12" style={{ background: backgroundColor }}>
+    {children}
+  </div>
+);
+
+ContainerSection.defaultProps = {
+  backgroundColor: 'white',
+};
+
+export default ContainerSection;

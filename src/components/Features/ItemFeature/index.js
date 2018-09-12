@@ -1,1 +1,1 @@
-export { default as ItemFeature } from "./ItemFeature";
+export default from './ItemFeature';

@@ -1,1 +1,1 @@
-export { default as ButtonScroll } from "./ButtonScroll";
+export default from './ButtonScroll';

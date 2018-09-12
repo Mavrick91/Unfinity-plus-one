@@ -1,1 +1,1 @@
-export { default as DisplayConcept } from "./DisplayConcept";
+export default from './DisplayConcept';
