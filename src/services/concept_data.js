@@ -6,10 +6,10 @@ import home5 from "../images/concept/home-5.jpg";
 import home6 from "../images/concept/home-6.jpg";
 
 export default [
-  { image: home1, title: "Corporate & Business" },
-  { image: home2, title: "Finance & Account" },
-  { image: home3, title: "Consulting & Business" },
-  { image: home4, title: "Construction Business" },
-  { image: home5, title: "Transportation & Logistic" },
-  { image: home6, title: "Lawyer" }
+  { id: 0, image: home2, title: "Finance & Account" },
+  { id: 1, image: home1, title: "Corporate & Business" },
+  { id: 2, image: home3, title: "Consulting & Business" },
+  { id: 3, image: home4, title: "Construction Business" },
+  { id: 4, image: home5, title: "Transportation & Logistic" },
+  { id: 5, image: home6, title: "Lawyer" }
 ];

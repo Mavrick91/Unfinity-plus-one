@@ -1,10 +1,12 @@
+// @flow
+
 import React, { PureComponent } from "react";
 
 import logoSlider from "../../../images/header/logo-slider.png";
 
 import "./Logo.css";
 
-class Logo extends PureComponent {
+class Logo extends PureComponent<{}> {
   render() {
     return (
       <div className="row">
