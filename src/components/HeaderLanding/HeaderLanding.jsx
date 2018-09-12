@@ -1,3 +1,5 @@
+// @flow
+
 import React, { PureComponent } from "react";
 import { Logo } from "./Logo";
 import { ButtonScroll } from "./ButtonScroll";
@@ -11,7 +13,7 @@ import layerConstruction from "../../images/header/layer-construction.png";
 
 import "./HeaderLanding.css";
 
-class HeaderLanding extends PureComponent {
+class HeaderLanding extends PureComponent<{}> {
   render() {
     return (
       <div className="col-md-12 header_container">

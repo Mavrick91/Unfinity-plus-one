@@ -1,3 +1,5 @@
+// @flow
+
 import React, { PureComponent } from "react";
 import InViewMonitor from "react-inview-monitor";
 import { DisplayConcept } from "./DisplayConcept";
@@ -6,7 +8,7 @@ import { ContainerSection } from "../ContainerSection";
 
 import "./Concept.css";
 
-export default class Concept extends PureComponent {
+export default class Concept extends PureComponent<{}> {
   render() {
     return (
       <ContainerSection>

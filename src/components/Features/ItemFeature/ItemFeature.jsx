@@ -1,10 +1,12 @@
+// @flow
+
 import React, { PureComponent } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AllFeatures from "../../../services/features_data";
 
 import "./ItemFeature.css";
 
-export default class ItemFeature extends PureComponent {
+export default class ItemFeature extends PureComponent<{}> {
   render() {
     return (
       <div className="col-md-12 item-feature_container">
