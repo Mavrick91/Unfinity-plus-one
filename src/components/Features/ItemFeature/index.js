@@ -1,1 +1,3 @@
-export default from './ItemFeature';
+import ItemFeature from './ItemFeature';
+
+export default ItemFeature;

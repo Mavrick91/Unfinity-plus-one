@@ -1,1 +1,3 @@
-export default from './HeaderLanding';
+import HeaderLanding from './HeaderLanding';
+
+export default HeaderLanding;

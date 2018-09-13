@@ -1,1 +1,3 @@
-export default from './ContainerSection';
+import ContainerSection from './ContainerSection';
+
+export default ContainerSection;

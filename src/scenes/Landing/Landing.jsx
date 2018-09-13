@@ -7,10 +7,11 @@ import Features from '../../components/Features';
 
 import './Landing.css';
 
-const sections = [HeaderLanding, Concept, Features];
+const sections = [<HeaderLanding />, <Concept />, <Features />];
 
 const LandingPage = () => (
   <Fragment>
+    test
     {sections.map(section => (
       <div className="row">{section}</div>
     ))}

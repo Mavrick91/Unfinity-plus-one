@@ -1,1 +1,3 @@
-export default from './TitleSection';
+import TitleSection from './TitleSection';
+
+export default TitleSection;

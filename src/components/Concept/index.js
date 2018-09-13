@@ -1,1 +1,3 @@
-export default from './Concept';
+import Concept from './Concept';
+
+export default Concept;

@@ -1,1 +1,3 @@
-export default from './ImagesSide';
+import ImagesSide from './ImagesSide';
+
+export default ImagesSide;

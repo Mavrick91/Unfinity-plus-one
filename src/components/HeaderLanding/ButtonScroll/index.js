@@ -1,1 +1,3 @@
-export default from './ButtonScroll';
+import ButtonScroll from './ButtonScroll';
+
+export default ButtonScroll;

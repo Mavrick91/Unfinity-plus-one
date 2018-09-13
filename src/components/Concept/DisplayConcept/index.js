@@ -1,1 +1,3 @@
-export default from './DisplayConcept';
+import DisplayConcept from './DisplayConcept';
+
+export default DisplayConcept;
