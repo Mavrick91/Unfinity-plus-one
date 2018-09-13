@@ -1,9 +1,18 @@
 const firebase = require('firebase');
-const { GraphQLObjectType, GraphQLString, GraphQLList } = require('graphql');
+const {
+  GraphQLObjectType,
+  GraphQLInt,
+  GraphQLString,
+  GraphQLList,
+} = require('graphql');
 
 const itemConceptType = new GraphQLObjectType({
   name: 'itemConceptType',
   fields: () => ({
+    id: {
+      type: GraphQLInt,
+      resolve: ({ id }) => id,
+    },
     picture: {
       type: GraphQLString,
       resolve: ({ picture }) => picture,

@@ -2,28 +2,38 @@
 
 import React from 'react';
 import InViewMonitor from 'react-inview-monitor';
+import { Query } from 'react-apollo';
+
 import DisplayConcept from './DisplayConcept';
 import TitleSection from '../TitleSection';
 import ContainerSection from '../ContainerSection';
+import { conceptQuery } from '../../utils/queries/landingePage';
 
 import './Concept.css';
 
 const Concept = () => (
-  <ContainerSection>
-    <TitleSection
-      title="CHOOSE A CONCEPT"
-      subtitle="Modern, easily importable, and highly customizable demo layouts.
-        Create your website without any effort, quickly and easily!"
-    />
-    <div className="row">
-      <InViewMonitor
-        classNameNotInView="vis-hidden"
-        classNameInView="animated fadeInUp container-fluid"
-      >
-        <DisplayConcept />
-      </InViewMonitor>
-    </div>
-  </ContainerSection>
+  <Query query={conceptQuery}>
+    {({ loading, error, data }) => {
+      if (loading) return <div />;
+      if (error) return <p>Error :(</p>;
+
+      const { title, subtitle, concepts } = data.concept;
+
+      return (
+        <ContainerSection>
+          <TitleSection title={title} subtitle={subtitle} />
+          <div className="row">
+            <InViewMonitor
+              classNameNotInView="vis-hidden"
+              classNameInView="animated fadeInUp container-fluid"
+            >
+              <DisplayConcept concepts={concepts} />
+            </InViewMonitor>
+          </div>
+        </ContainerSection>
+      );
+    }}
+  </Query>
 );
 
 export default Concept;

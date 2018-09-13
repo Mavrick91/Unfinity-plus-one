@@ -1,22 +1,25 @@
 // @flow
 
 import React from 'react';
-import allConcept from '../../../services/concept_data';
 
 import './DisplayConcept.css';
 
 type conceptDataItem = {
   id: number,
-  image: any,
-  title: string
+  picture: string,
+  title: string,
 };
 
-export default () => (
+type Props = {
+  concepts: Array<conceptDataItem>,
+};
+
+export default ({ concepts }: Props) => (
   <div className="col-md-12 display-concept_container">
-    {allConcept.map((item: conceptDataItem) => (
+    {concepts.map((item: conceptDataItem) => (
       <div key={item.id} className="display-concept_item">
         <div className="display-concept_image">
-          <img src={item.image} alt="" />
+          <img src={item.picture} alt="" />
         </div>
         <h5 className="display-concept_title">{item.title}</h5>
       </div>

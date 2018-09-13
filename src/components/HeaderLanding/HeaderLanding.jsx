@@ -1,33 +1,41 @@
 // @flow
 
 import React from 'react';
+import { Query } from 'react-apollo';
+
 import Logo from './Logo';
 import ButtonScroll from './ButtonScroll';
 import ImagesSide from './ImagesSide';
-
-import layerVent from '../../images/header/layer-vent.png';
-import layerHospital from '../../images/header/layer-hospital.png';
-import layerAwyer from '../../images/header/layer-awyer.png';
-import layerTranport from '../../images/header/layer-transport.png';
-import layerConstruction from '../../images/header/layer-construction.png';
+import { headerQuery } from '../../utils/queries/landingePage';
 
 import './HeaderLanding.css';
 
 const HeaderLanding = () => (
-  <div className="col-md-12 header_container">
-    <div className="col-md-12 header_container-scale">
-      <div className="header-basis header_image">
-        <ImagesSide pictures={[layerHospital, layerVent]} />
-      </div>
-      <div className="header-basis header-basis-intro header_intro">
-        <Logo />
-        <ButtonScroll />
-      </div>
-      <div className="header-basis header_image">
-        <ImagesSide pictures={[layerAwyer, layerTranport, layerConstruction]} />
-      </div>
-    </div>
-  </div>
+  <Query query={headerQuery}>
+    {({ loading, error, data }) => {
+      if (loading) return <div />;
+      if (error) return <p>Error :(</p>;
+
+      const { title, subtitle, logo, pictures } = data.header;
+
+      return (
+        <div className="col-md-12 header_container">
+          <div className="col-md-12 header_container-scale">
+            <div className="header-basis header_image">
+              <ImagesSide pictures={[pictures[2], pictures[4]]} />
+            </div>
+            <div className="header-basis header-basis-intro header_intro">
+              <Logo title={title} subtitle={subtitle} logo={logo} />
+              <ButtonScroll />
+            </div>
+            <div className="header-basis header_image">
+              <ImagesSide pictures={[pictures[0], pictures[3], pictures[1]]} />
+            </div>
+          </div>
+        </div>
+      );
+    }}
+  </Query>
 );
 
 export default HeaderLanding;

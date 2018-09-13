@@ -2,14 +2,22 @@
 
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import AllFeatures from '../../../services/features_data';
 
 import './ItemFeature.css';
 
-const ItemFeature = () => (
+type Props = {
+  features: Array<{
+    id: number,
+    icon: string,
+    title: string,
+    description: string,
+  }>,
+};
+
+const ItemFeature = ({ features }: Props) => (
   <div className="col-md-12 item-feature_container">
-    {AllFeatures.map(feature => (
-      <div key={feature.title} className="feature_wrapper">
+    {features.map((feature) => (
+      <div key={feature.id} className="feature_wrapper">
         <div className="item_icon">
           <FontAwesomeIcon icon={feature.icon} size="2x" color="white" />
         </div>

@@ -11,9 +11,10 @@ const sections = [<HeaderLanding />, <Concept />, <Features />];
 
 const LandingPage = () => (
   <Fragment>
-    test
-    {sections.map(section => (
-      <div className="row">{section}</div>
+    {sections.map((section, index) => (
+      <div className="row" key={index}>
+        {section}
+      </div>
     ))}
   </Fragment>
 );

@@ -1,10 +1,13 @@
 const express = require('express');
 const graphqlHTTP = require('express-graphql');
 const firebase = require('firebase');
+const cors = require('cors');
 
 const graphQLSchema = require('./graphql/schema');
 
 const app = express();
+
+app.use(cors());
 
 app.use(
   '/graphql',
