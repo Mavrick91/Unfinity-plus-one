@@ -1,6 +1,7 @@
 const { GraphQLSchema, GraphQLObjectType } = require('graphql');
 const header = require('./header');
 const concept = require('./concept');
+const feature = require('./feature');
 
 const schema = new GraphQLSchema({
   query: new GraphQLObjectType({
@@ -8,6 +9,7 @@ const schema = new GraphQLSchema({
     fields: {
       header,
       concept,
+      feature,
     },
   }),
 });
