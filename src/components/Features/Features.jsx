@@ -20,14 +20,16 @@ const Features = () => (
 
       return (
         <ContainerSection backgroundColor="#f8f8f8">
-          <TitleSection title={title} subtitle={subtitle} />
-          <div className="row">
-            <InViewMonitor
-              classNameNotInView="vis-hidden"
-              classNameInView="animated fadeIn container-fluid"
-            >
-              <ItemFeature features={features} />
-            </InViewMonitor>
+          <div className="features_container">
+            <TitleSection title={title} subtitle={subtitle} />
+            <div className="row">
+              <InViewMonitor
+                classNameNotInView="vis-hidden"
+                classNameInView="animated fadeIn container-fluid"
+              >
+                <ItemFeature features={features} />
+              </InViewMonitor>
+            </div>
           </div>
         </ContainerSection>
       );
