@@ -14,8 +14,12 @@ const Logo = ({ title, subtitle, logo }: Props) => (
   <div className="row">
     <div className="col-md-12 logo_intro">
       <img src={logo} alt="" />
-      <div className="logo_intro-first">{title}</div>
-      <div className="logo_intro-second">{subtitle}</div>
+      <div className="logo_intro-first d-none d-sm-none d-md-block">
+        {title}
+      </div>
+      <div className="logo_intro-second d-none d-sm-none d-md-block">
+        {subtitle}
+      </div>
     </div>
   </div>
 );

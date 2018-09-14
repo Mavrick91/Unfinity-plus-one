@@ -12,6 +12,8 @@
 			width: 100%
 			position: relative
 			overflow: hidden
+			box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1)
+			border-radius: 10px
 
 			&::before
 				content: ""
@@ -56,3 +58,15 @@
 			padding-top: 30px
 			text-align: center
 			font-weight: bold                                      
+
+@media screen and (max-width: 768px)
+	.display-concept_container
+		justify-content: space-between
+		.display-concept_item
+			width: 100%
+			margin: 0
+
+			& + .display-concept_item
+				margin-top: 30px
+
+

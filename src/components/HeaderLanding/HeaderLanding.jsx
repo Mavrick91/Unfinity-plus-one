@@ -21,14 +21,14 @@ const HeaderLanding = () => (
       return (
         <div className="col-md-12 header_container">
           <div className="col-md-12 header_container-scale">
-            <div className="header-basis header_image">
+            <div className="header-basis d-none d-sm-none d-md-block">
               <ImagesSide pictures={[pictures[2], pictures[4]]} />
             </div>
             <div className="header-basis header-basis-intro header_intro">
               <Logo title={title} subtitle={subtitle} logo={logo} />
               <ButtonScroll />
             </div>
-            <div className="header-basis header_image">
+            <div className="header-basis d-none d-sm-none d-md-block">
               <ImagesSide pictures={[pictures[0], pictures[3], pictures[1]]} />
             </div>
           </div>
