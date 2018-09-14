@@ -5,21 +5,21 @@ import './ImagesSide.css';
 
 type Props = {
   picture: string,
-  top: string,
+  bottom: string,
   left: string,
   zIndex: string,
 };
 
 export default class ImagesSide extends PureComponent<Props> {
   render() {
-    const { picture, top, left, zIndex } = this.props;
+    const { picture, bottom, left, zIndex } = this.props;
 
     return (
       <div
         className="images_container"
         style={{
           left,
-          top,
+          bottom,
           zIndex,
         }}
       >
