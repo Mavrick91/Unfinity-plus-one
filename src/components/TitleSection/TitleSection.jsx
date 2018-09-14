@@ -2,9 +2,11 @@
 
 import React, { PureComponent } from 'react';
 
+import './TitleSection.css';
+
 type Props = {
   title: string,
-  subtitle: string
+  subtitle: string,
 };
 
 export default class TitleSection extends PureComponent<Props> {
@@ -12,8 +14,8 @@ export default class TitleSection extends PureComponent<Props> {
     const { title, subtitle } = this.props;
 
     return (
-      <div className="row py-md-5">
-        <div className="col-md-5 mx-auto">
+      <div className="row py-sm-5 py-4">
+        <div className="title-section_wrapper col-md-5 col-sm-9 mx-auto ">
           <h1 className="concept_title">{title}</h1>
           <p className="concept_description">{subtitle}</p>
         </div>

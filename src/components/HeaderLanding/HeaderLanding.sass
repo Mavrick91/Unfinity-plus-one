@@ -16,8 +16,6 @@
 	.header_container-scale:hover
 		transform: scale(1.05)
 
-	.header_image
-
 	.header_intro
 		display: flex
 		transition: 3s
@@ -35,3 +33,13 @@
 	.header-basis-intro
 		flex-grow: 2
 		flex-shrink: 2
+
+@media screen and (max-width: 768px)
+	.header_container
+		height: 100vh
+
+		.header_intro
+			justify-content: space-evenly
+
+		.header_container-scale
+			align-items: stretch
