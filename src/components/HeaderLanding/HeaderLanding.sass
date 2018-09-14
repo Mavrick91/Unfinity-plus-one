@@ -9,8 +9,6 @@
 	.header_container-scale
 		display: flex
 		transition: 3s
-		width: 100%
-		justify-content: flex-end
 		align-items: flex-end
 
 	.header_container-scale:hover
@@ -20,26 +18,11 @@
 		display: flex
 		transition: 3s
 		width: 100%
-		justify-content: center
+		height: 100%
+		justify-content: space-evenly
 		flex-direction: column
 		align-items: center
-
-	.header-basis
-		flex: 1 1 0
-
-		&:nth-child(1)
-			flex-direction: row-reverse
-
-	.header-basis-intro
-		flex-grow: 2
-		flex-shrink: 2
 
 @media screen and (max-width: 768px)
 	.header_container
 		height: 100vh
-
-		.header_intro
-			justify-content: space-evenly
-
-		.header_container-scale
-			align-items: stretch
