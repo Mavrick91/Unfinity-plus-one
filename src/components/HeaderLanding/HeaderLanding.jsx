@@ -18,18 +18,30 @@ const HeaderLanding = () => (
 
       const { title, subtitle, logo, pictures } = data.header;
 
+      const picturesStyled = [
+        { picture: pictures[0], left: '0%', top: '45%', zIndex: '10' },
+        { picture: pictures[3], left: '10%', top: '40%', zIndex: '0' },
+        { picture: pictures[4], left: '72%', top: '50%', zIndex: '0' },
+        { picture: pictures[1], left: '81%', top: '37%', zIndex: '10' },
+        { picture: pictures[2], left: '88%', top: '55%', zIndex: '20' },
+      ];
+
       return (
         <div className="col-md-12 header_container">
           <div className="col-md-12 header_container-scale">
             <div className="header-basis d-none d-sm-none d-md-block">
-              <ImagesSide pictures={[pictures[2], pictures[4]]} />
+              {picturesStyled.map((item) => (
+                <ImagesSide
+                  picture={item.picture}
+                  left={item.left}
+                  top={item.top}
+                  zIndex={item.zIndex}
+                />
+              ))}
             </div>
             <div className="header-basis header-basis-intro header_intro">
               <Logo title={title} subtitle={subtitle} logo={logo} />
               <ButtonScroll />
-            </div>
-            <div className="header-basis d-none d-sm-none d-md-block">
-              <ImagesSide pictures={[pictures[0], pictures[3], pictures[1]]} />
             </div>
           </div>
         </div>
