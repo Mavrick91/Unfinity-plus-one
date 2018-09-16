@@ -27,11 +27,12 @@ const HeaderLanding = () => (
       ];
 
       return (
-        <div className="col-md-12 header_container">
+        <div className="col-md-12 p-0 header_container">
           <div className="col-md-12 header_container-scale">
             <div className="d-none d-sm-none d-md-block">
               {picturesStyled.map((item) => (
                 <ImagesSide
+                  key={item.picture}
                   picture={item.picture}
                   left={item.left}
                   bottom={item.bottom}
