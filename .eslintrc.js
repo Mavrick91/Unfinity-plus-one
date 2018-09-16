@@ -8,5 +8,6 @@ module.exports = {
     'arrow-parens': 'off',
     'object-curly-newline': 'off',
     'react/no-array-index-key': 'off',
+    'import/no-extraneous-dependencies': 'off',
   },
 };

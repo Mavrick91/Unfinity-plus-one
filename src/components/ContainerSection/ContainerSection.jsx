@@ -20,7 +20,7 @@ const ContainerSection = ({ backgroundColor, children, id }: Props) => (
 
 ContainerSection.defaultProps = {
   backgroundColor: 'white',
-  id: '',
+  id: null,
 };
 
 export default ContainerSection;
