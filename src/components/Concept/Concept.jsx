@@ -20,7 +20,7 @@ const Concept = () => (
       const { title, subtitle, concepts } = data.concept;
 
       return (
-        <ContainerSection>
+        <ContainerSection id="concept">
           <TitleSection title={title} subtitle={subtitle} />
           <div className="row">
             <InViewMonitor
