@@ -27,3 +27,13 @@
 	.item_description
 		font-family: 'Hind', Arial, sans-serif
 		color: #777
+
+@media screen and (max-width: 768px)
+	.item-feature_container
+		.feature_wrapper
+			padding: 0 15px
+
+			& + .feature_wrapper
+				padding: 60px 15px 0
+				max-width: 360px
+				text-align: center

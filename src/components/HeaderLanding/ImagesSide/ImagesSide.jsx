@@ -16,21 +16,14 @@ export default class ImagesSide extends PureComponent<Props> {
 
     return (
       <div
-        className="images_container"
+        className="images-side_container"
         style={{
           left,
           bottom,
           zIndex,
         }}
       >
-        <img
-          src={picture}
-          alt=""
-          style={{
-            boxShadow: '5px 5px 10px #111',
-            height: '300px',
-          }}
-        />
+        <img src={picture} alt="" className="image-side_image" />
       </div>
     );
   }

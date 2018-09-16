@@ -8,7 +8,7 @@ type Props = {
 };
 
 const ContainerSection = ({ backgroundColor, children }: Props) => (
-  <div className="col-md-12" style={{ background: backgroundColor }}>
+  <div className="col-md-12 py-5 px-4" style={{ background: backgroundColor }}>
     {children}
   </div>
 );

@@ -2,11 +2,13 @@
 	display: flex
 	justify-content: space-around
 	flex-wrap: wrap
-	margin-bottom: 60px
+	padding: 0
 
 	.display-concept_item
 		width: 30%
-		margin-bottom: 60px
+
+		& + .display-concept_item + .display-concept_item + .display-concept_item
+			padding-top: 70px
 
 		.display-concept_image
 			width: 100%
@@ -14,6 +16,7 @@
 			overflow: hidden
 			box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1)
 			border-radius: 10px
+
 
 			&::before
 				content: ""
@@ -67,6 +70,5 @@
 			margin: 0
 
 			& + .display-concept_item
-				margin-top: 30px
-
+				padding-top: 60px!important
 
