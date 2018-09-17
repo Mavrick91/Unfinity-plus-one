@@ -15,7 +15,7 @@ const Concept = () => (
   <Query query={conceptQuery}>
     {({ loading, error, data }) => {
       if (loading) return <div />;
-      if (error) return <p>Error :(</p>;
+      if (error) return <p>Error</p>;
 
       const { title, subtitle, concepts } = data.concept;
 
